@@ -3,6 +3,7 @@
 
 import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
+import { PersonalDetails } from "@/constants/PersonalDetail";
 
 
 export default function OverviewSection() {
@@ -110,7 +111,7 @@ export default function OverviewSection() {
                   <div>
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-gray-900 dark:text-white flex items-center gap-2 md:gap-3">
                       <span className="text-2xl sm:text-3xl md:text-4xl">👋</span>
-                      Hello, I&apos;m Gourav Mishra
+                      Hello, I&apos;m {PersonalDetails.name}
                     </h3>
                     <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-4 md:mb-6">
                       A passionate <span className="font-bold text-blue-600 dark:text-blue-400">Full Stack Developer</span> and
@@ -155,8 +156,8 @@ export default function OverviewSection() {
               className="relative rounded-3xl p-2 overflow-hidden shadow-2xl border border-white/20 dark:border-gray-700/50 bg-gradient-to-br from-gray-200/30 to-white/10 dark:from-gray-800/40 dark:to-gray-900/30 backdrop-blur-sm "
             >
               <img
-                src="/adobenewdp.png"
-                alt="Gourav Mishra"
+                src={PersonalDetails.profilePic}
+                alt={PersonalDetails.name}
                 
                 className=" w-full h-full object-cover rounded-3xl "
               />

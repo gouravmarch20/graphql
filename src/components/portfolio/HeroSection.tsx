@@ -4,6 +4,8 @@ import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import TypewriterRole from "./TypewriterRole";
+import { PersonalDetails } from "@/constants/PersonalDetail";
+
 
 export default function HeroSection() {
   return (
@@ -46,7 +48,7 @@ export default function HeroSection() {
           transition={{ delay: 0.2, duration: 0.6 }}
         >
           <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent z-10">
-            Gourav Mishra
+            {PersonalDetails.name}
           </span>
         </motion.h1>
 
@@ -71,10 +73,10 @@ export default function HeroSection() {
           transition={{ delay: 1.0 }}
         >
           {[
-            { href: "https://github.com/sourbh-km13", icon: "simple-icons:github", label: "GitHub", color: "hover:text-gray-900 dark:hover:text-white" },
-            { href: "https://linkedin.com/in/Sourabh-199666", icon: "skill-icons:linkedin", label: "LinkedIn", color: "hover:text-blue-600" },
-            { href: "mailto:Sourabhkrm13@gmail.com", icon: "material-icon-theme:email", label: "Email", color: "hover:text-green-600" },
-            { href: "https://maps.google.com/delhi", icon: "mdi:location", label: "New-Delhi", color: "hover:text-red-600" },
+            { href: PersonalDetails.github, icon: "simple-icons:github", label: "GitHub", color: "hover:text-gray-900 dark:hover:text-white" },
+            { href: PersonalDetails.linkedin, icon: "skill-icons:linkedin", label: "LinkedIn", color: "hover:text-blue-600" },
+            { href: `mailto:${PersonalDetails.email}`, icon: "material-icon-theme:email", label: PersonalDetails.email, color: "hover:text-green-600" },
+            { href: `https://www.google.com/maps/search/${PersonalDetails.location}`, icon: "mdi:location", label: PersonalDetails.location, color: "hover:text-red-600" },
             
           ].map((link) => (
             <motion.div key={link.label} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
