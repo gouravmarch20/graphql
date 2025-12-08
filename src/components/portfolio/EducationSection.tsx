@@ -81,7 +81,7 @@ export default function EducationSection() {
                                 transition={{ delay: 0.8, duration: 0.6 }}
                                 viewport={{ once: false }}
                             >
-                                <span className={`${edu.gradient} bg-clip-text text-transparent`}>
+                                <span className={`${edu.gradient} bg-clip-text text-purple-700`}>
                                     {edu.institution}
                                 </span>
                             </motion.h2>
